@@ -75,11 +75,20 @@ Since Lore is still in active development, I'm going to list the things that hav
 4. [[done](https://github.com/lore/lore/pull/161)] Add ability to override redux store creation
 5. [[done](https://github.com/lore/lore/pull/162)] Add ability to normalize API responses
 6. [[done](https://github.com/lore/lore/pull/163)] Add ability to override connect blueprints
-7. [in-progress] Add ability to override root component construction and DOM mounting
-8. Add Redux DevTools to new projects by default in development environment (with flag to enable/disable)
+7. [[done](https://github.com/lore/lore/pull/164)] Add ability to override root component construction and DOM mounting
+8. [in-progress] Add Redux DevTools to new projects by default in development environment (with flag to enable/disable)
 9. Improve default production configuration
 10. Add normalization and publishing steps to Quickstart
 11. Publish v0.12
+
+
+### Note about React Hot Reloading
+
+Dan Abramov's [Hot Reloading with Time Travel](https://www.youtube.com/watch?v=xsSnOQynTHs) talk from React Europe 2015 demonstrated an incredible (and unique) value proposition for Redux and the functional programming concepts it uses as a foundation. That functionality has since been packaged into a library called [react-hot-loader](https://github.com/gaearon/react-hot-loader), which has gone through two major versions, with the beta version for v3 currently in development.
+
+While there are tutorials that demonstrate how to obtain that functionality in React applications ([webpack tutorial](https://webpack.js.org/guides/hmr-react/), [react-hot-loader tutorial]()) the library itself [does not currently work with react-router](https://github.com/gaearon/react-hot-loader/issues/449), which is why it's not included as part of the development environment for Lore.
+
+Once those issues are resolved, Lore will investigate including as a default development behavior, similar to the way the Redux DevTools are included by default starting in `v0.12`.
 
 
 ### Thanks
